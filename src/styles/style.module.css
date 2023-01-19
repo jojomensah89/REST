@@ -1,0 +1,14 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  background: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  list-style: none;
+}
+
+.box--shadow {
+  box-shadow: 2px 2px 1em rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,600;0,800;1,400&display=swap");
+.dark {
+  color: white;
+  background: #2b3844;
+}
+
+.light {
+  color: #2b3844;
+}
+
+.countryItem {
+  box-shadow: 0 0 0.44rem -0.0625rem rgb(0 0 0 / 43%);
+  width: 100%;
+  border-radius: 0.3rem;
+}
+.countryItem a .imgArea {
+  background: none;
+  height: 150px;
+  width: 100%;
+}
+.countryItem a .imgArea img {
+  background: none;
+  height: 150px;
+  width: 100%;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+.countryItem a .countryData {
+  padding: 10px 20px;
+}
+.countryItem a .countryData .countryName {
+  font-size: 20px;
+  margin: 10px 0px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+}
+.countryItem a .countryData p {
+  font-weight: 600;
+  font-size: 16px;
+  color: none;
+  margin: 10px 0px;
+  padding: none;
+  font-family: "Nunito Sans";
+  line-height: 20px;
+}
+.countryItem a .countryData p span {
+  font-weight: 300;
+  font-family: "Nunito Sans";
+  line-height: 12px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 500px) {
+  .countryItems a {
+    color: #000;
+  }
+
+  .countryItems .imgArea .img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .countryItems .data--area {
+    padding: 10px 20px;
+  }
+  .countryItems .data--area p {
+    font-weight: 600;
+    font-size: 14px;
+    color: none;
+    margin: 10px 0px;
+    padding: none;
+    font-family: "Nunito Sans";
+    line-height: 16px;
+  }
+  .countryItems .data--area p span {
+    font-weight: 300;
+    font-family: "Nunito Sans";
+    line-height: 12px;
+  }
+  .countryItems .countryName {
+    margin: 10px 0px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

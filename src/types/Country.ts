@@ -1,0 +1,24 @@
+export interface Country {
+  name: string;
+  alpha3Code: string;
+  nativeName: string;
+  population: number;
+  region: string;
+  subregion: string;
+  capital: string;
+  flags: {
+    png: string;
+  };
+  topLevelDomain: [string];
+  currencies: [
+    {
+      name: string;
+    }
+  ];
+  languages: [
+    {
+      name: string;
+    }
+  ];
+  borders: [string];
+}
