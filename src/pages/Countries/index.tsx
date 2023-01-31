@@ -9,27 +9,73 @@ import { ThemeContext } from "../../context/ThemeContextProvider";
 export const Countries = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const countries = useContext(AllCountriesData);
-  const [filtredCountries, setFiltredCountries] =
+  const [filteredCountries, setFilteredCountries] =
     useState<Country[]>(countries);
   const [search, setSearch] = useState("");
+  const [regionFilter, setRegionFilter] = useState("");
 
   useEffect(() => {
-    const searchResult = countries.filter(
-      (country) =>
-        country.name.toLowerCase().includes(lowerSearch) ||
-        country.region.toLowerCase().includes(lowerSearch)
-    );
-    setFiltredCountries(searchResult);
-  }, [search, countries]);
+    const lowerSearch = search.toLocaleLowerCase();
 
-  const lowerSearch = search.toLocaleLowerCase();
+    const searchResult = countries.filter((country) =>
+      country.name.toLowerCase().includes(lowerSearch)
+    );
+    const filterByRegion = countries.filter(
+      (country) => country.region === regionFilter
+    );
+
+    const searchAfterFilter = filterByRegion.filter((country) =>
+      country.name.toLowerCase().includes(lowerSearch)
+    );
+
+    if (regionFilter && lowerSearch) {
+      setFilteredCountries(searchAfterFilter);
+    } else if (regionFilter) {
+      setFilteredCountries(filterByRegion);
+    } else if (lowerSearch) {
+      setFilteredCountries(searchResult);
+    } else {
+      setFilteredCountries(countries);
+    }
+  }, [search, regionFilter, countries]);
+
+  const handleSearch = (term: string) => {
+    setSearch(term);
+    setFilteredCountries(
+      countries.filter((country) =>
+        country.name.toLowerCase().includes(term.toLowerCase())
+      )
+    );
+  };
+
+  const handleFilter = (region: string) => {
+    setRegionFilter(region);
+    setFilteredCountries(
+      countries.filter((country) => country.region === region)
+    );
+  };
+
+  const handleSearchAfterFilter = (term: string) => {
+    setSearch(term);
+    setFilteredCountries(
+      filteredCountries.filter((country) =>
+        country.name.toLowerCase().includes(term.toLowerCase())
+      )
+    );
+  };
 
   return (
     <main className={`${Styles.main} ${Styles[theme]}`}>
-      <InputArea value={search} Search={setSearch} />
+      <InputArea
+        searchValue={search}
+        regionValue={regionFilter}
+        Search={setSearch}
+        Filter={setRegionFilter}
+        // FilterAndSearch={handleSearchAfterFilter}
+      />
       <div className={Styles.countries}>
         {countries ? (
-          filtredCountries.map((country, index) => (
+          filteredCountries.map((country, index) => (
             <CountryItem country={country} key={index} />
           ))
         ) : (
