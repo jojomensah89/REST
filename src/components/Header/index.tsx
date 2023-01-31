@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { FiMoon } from "react-icons/fi";
 import { ThemeContext } from "../../context/ThemeContextProvider";
 import Styles from "./styles.module.css";
@@ -9,11 +9,13 @@ export const Header = () => {
   return (
     <div className={Styles[theme]}>
       <header className={`${Styles.header}`}>
-        <h1>Where in the world?</h1>
-        <p
+        <div className={`${Styles.heading}`}>
+          <h1>Where in the world ?</h1>
+        </div>
+        <div
+          className={`${Styles.theme_switcher}`}
           onClick={() => {
             setTheme(theme === "light" ? "dark" : "light");
-            console.log(theme);
           }}
         >
           <p className={`${Styles.themeIcon}`}>
@@ -25,8 +27,8 @@ export const Header = () => {
               )}
             </span>
           </p>
-          <span>Dark Mode</span>
-        </p>
+          <p>Dark Mode</p>
+        </div>
       </header>
     </div>
   );
