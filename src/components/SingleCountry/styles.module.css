@@ -4,8 +4,8 @@
 }
 
 .dark {
-  color: white;
-  background: #202c36;
+  color: #ffffff;
+  background: #2b3844;
 }
 
 .SingleCountry {
@@ -78,7 +78,7 @@
 .SingleCountry .countryData .borderArea .borders .singleBorder {
   font-weight: 300;
   font-size: 12px;
-  color: #000;
+  /* color: #000; */
   margin: none none;
   padding: 7px;
   display: flex;
