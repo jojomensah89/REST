@@ -21,7 +21,7 @@ export const SingleCountry: FC<SingleCountryProps> = (props) => {
   };
 
   return (
-    <div className={` ${Styles.SingleCountry} ${Styles[theme]}`}>
+    <div className={` ${Styles.SingleCountry} `}>
       <img
         src={props.country.flags.png}
         alt={`country Name : ${props.country.name}`}
@@ -77,13 +77,13 @@ export const SingleCountry: FC<SingleCountryProps> = (props) => {
         </div>
         <div className={Styles.borderArea}>
           <p>Border Countries :</p>
-          <div className={`${Styles.borders} ${Styles[theme]}`}>
+          <div className={`${Styles.borders} `}>
             {props.country.borders &&
               props.country.borders.map((borderCode, index) => (
                 <Link
                   to={`/country/${borderCode}`}
                   key={index}
-                  className={Styles.singleBorder}
+                  className={`${Styles.singleBorder} ${Styles[theme]}`}
                 >
                   <span className={Styles[theme]}>
                     {getNameByCode(borderCode)}{" "}
