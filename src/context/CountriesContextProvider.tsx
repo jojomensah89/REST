@@ -17,6 +17,8 @@ export function CountriesContext({ children }: childrenType) {
       .getCountries()
       .then((result) => {
         setCountries(result);
+
+        console.log(result);
       })
       .catch((error) => {
         return error;
