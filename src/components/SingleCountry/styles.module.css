@@ -13,43 +13,59 @@
   flex-direction: column;
   gap: 10px;
   width: 100%;
+  margin-top: 80px;
   padding: 0px 4%;
   border-radius: 0.3rem;
+  /* border: 3px solid yellow; */
 }
 .SingleCountry img {
   width: 100%;
-  margin: auto;
+  margin: 0;
+  max-width: 559.71px;
   border-radius: 0.3rem;
 }
 .SingleCountry .countryData {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 598px;
+  margin-right: 60px;
+  margin-left: 0;
   padding-top: 65px;
+  /* border: 1px solid red; */
 }
 .SingleCountry .countryData h1 {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 800;
-  font-size: 22px;
+  font-size: 32px;
   line-height: 30px;
+  /* border: 1px solid green; */
 }
 .SingleCountry .countryData .dataArea {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 10px;
+  /* border: 1px solid blue; */
+  max-width: 500px;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 .SingleCountry .countryData .dataArea p {
   margin: 5px 0px;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 32px;
+  /* border: 1px solid pink; */
 }
 .SingleCountry .countryData .dataArea p span {
   font-weight: bold;
+  font-family: "Nunito Sans", sans-serif;
 }
 .SingleCountry .countryData .dataArea p .language {
   font-weight: 10;
+  font-family: "Nunito Sans", sans-serif;
+
   margin: 5px;
 }
 .SingleCountry .countryData .dataArea .topLevel span {
@@ -58,36 +74,45 @@
 .SingleCountry .countryData .borderArea {
   display: flex;
   width: 100%;
-  gap: 10px;
+  /* gap: 10px; */
   flex-direction: column;
+  /* border: 1px solid red; */
 }
 .SingleCountry .countryData .borderArea p {
-  width: 200px;
+  width: 100%;
+  max-width: 130px;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  /* border: 1px solid yellow; */
 }
 .SingleCountry .countryData .borderArea .borders {
   display: grid;
+  max-width: 300px;
+  font-family: "Nunito Sans", sans-serif;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 8px;
+  grid-gap: 5px;
   width: 100%;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
+  /* border: 1px solid blue; */
 }
 .SingleCountry .countryData .borderArea .borders .singleBorder {
   font-weight: 300;
+  font-family: "Nunito Sans", sans-serif;
+  /* max-width: 57px; */
+  width: 100%;
   font-size: 12px;
   /* color: #000; */
   margin: none none;
-  padding: 7px;
+  padding: 4px 10px;
   display: flex;
   flex-direction: none;
   justify-content: center;
   align-items: center;
   gap: none;
-  height: 35px;
-  max-width: 190px;
+  height: 28px;
+  /* max-width: 190px; */
   line-height: 16px;
   box-shadow: 1px 1px 1em rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
@@ -100,6 +125,9 @@
   }
   .SingleCountry .countryData {
     margin-bottom: 50px;
+  }
+  .SingleCountry .countryData .borderArea .borders {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -115,6 +143,7 @@
   .SingleCountry .countryData .dataArea {
     flex-direction: row;
     gap: 100px;
+    /* border: 1px solid green; */
   }
   .SingleCountry .countryData .borderArea {
     flex-direction: row;
@@ -130,7 +159,7 @@
   }
   .SingleCountry .countryData {
     width: 700px;
-    margin: auto;
+    /* margin: auto; */
   }
   .SingleCountry .countryData h1 {
     font-weight: 800;
@@ -205,7 +234,7 @@
     width: 120%;
     flex-direction: column;
     gap: 10px;
-    margin-top: -10px;
+    margin-top: 0;
   }
   .SingleCountry .countryData .dataArea {
     flex-direction: row;
