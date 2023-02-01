@@ -76,7 +76,7 @@ export const SingleCountry: FC<SingleCountryProps> = (props) => {
           </div>
         </div>
         <div className={Styles.borderArea}>
-          <p>Border Countries :</p>
+          <p>Border Countries:</p>
           <div className={`${Styles.borders} `}>
             {props.country.borders &&
               props.country.borders.map((borderCode, index) => (
